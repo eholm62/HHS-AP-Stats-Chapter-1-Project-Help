@@ -43,6 +43,9 @@ fiveNum2024 = stats.getFiveNumSummary(data2024)
 filteredSample2020 = list(filter(lambda x: not stats.isOutlier(x, fiveNum2020), sample2020))
 filteredSample2024 = list(filter(lambda x: not stats.isOutlier(x, fiveNum2024), sample2024))
 
+print(stats.getFiveNumSummary(data2020))
+print(stats.getFiveNumSummary(data2024))
+
 with open("processed_data.csv", "w") as dataFile:
     for dataPoint in filteredSample2020:
         dataFile.write(str(dataPoint) + ", ")
