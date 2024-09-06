@@ -57,3 +57,6 @@ def isOutlier(x, fiveNumSummary):
     elif x > fiveNumSummary[3] + 1.5 * iqr:
         return True
     return False
+
+def getMean(arr):
+    return sum(arr) / len(arr)
